@@ -8,23 +8,63 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white flex flex-col items-center text-center">
-
-  <!-- Navbar -->
-  <div class="navbar bg-base-100 font-bold px-4 w-full max-w-screen-xl">
-    <div class="flex items-center space-x-2">
-      <img src="Images/Group 40071 (2).png" alt="logo" class="h-8 w-8">
-      <a class="btn btn-ghost text-xl">Hero <span class="text-orange-700">Travel</span></a>
-    </div>
-    <div class="flex justify-start items-center space-x-4 ml-auto">
-      <ul class="menu menu-horizontal px-1">
-        <li><a class="text-orange-700">Home</a></li>
-        <li><a>Packages</a></li>
-        <li><a>Testimonial</a></li>
-        <li><a>Blog</a></li>
-        <li><a>Contact</a></li>
-      </ul>
+<!----Navbar--->
+<div class="lg:hidden drawer drawer-end">
+  <input id="menu-drawer" type="checkbox" class="drawer-toggle" />
+  
+  <div class="drawer-content">
+    <!-- Navbar -->
+    <div class="navbar bg-base-100 font-bold px-4 w-full">
+      <div class="flex items-center justify-between w-full">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <img src="Images/Group 40071 (2).png" alt="logo" class="h-8 w-8">
+          <a class="btn btn-ghost text-xl">Hero <span class="text-orange-700">Travel</span></a>
+        </div>
+        
+        <!-- Hamburger Button -->
+        <label for="menu-drawer" class="btn btn-ghost btn-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+      </div>
     </div>
   </div>
+
+  <!-- Drawer Sidebar -->
+  <div class="drawer-side">
+    <label for="menu-drawer" class="drawer-overlay"></label>
+    <ul class="menu p-4 w-64 min-h-full bg-base-100 text-base-content">
+      <li><a class="text-orange-700">Home</a></li>
+      <li><a>Packages</a></li>
+      <li><a>Testimonial</a></li>
+      <li><a>Blog</a></li>
+      <li><a>Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Horizontal Navbar for large screens -->
+<div class="hidden lg:flex navbar bg-base-100 font-bold px-4 w-full max-w-screen-xl mx-auto">
+  <div class="flex items-center space-x-2">
+    <img src="Images/Group 40071 (2).png" alt="logo" class="h-8 w-8">
+    <a class="btn btn-ghost text-xl">Hero <span class="text-orange-700">Travel</span></a>
+  </div>
+  <div class="flex justify-start items-center space-x-4 ml-auto">
+    <ul class="menu menu-horizontal px-1">
+      <li><a class="text-orange-700">Home</a></li>
+      <li><a>Packages</a></li>
+      <li><a>Testimonial</a></li>
+      <li><a>Blog</a></li>
+      <li><a>Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+
 
   <!-- HERO BANNER -->
   <div class="relative bg-cover bg-center h-[500px] mt-4 rounded-lg overflow-hidden w-full max-w-screen-xl" style="background-image: url('Images/Group 13 (1) (1).png');">
